@@ -14,6 +14,7 @@ const colorValueDisplayBlue = document.getElementById("color-value-display-blue"
 
 const buttonSetResolution = document.getElementById("btn-set-resolution")
 const buttonSetBackground = document.getElementById("btn-set-background")
+const buttonSaveImage = document.getElementById("btn-save-image")
 
 const grid = document.getElementById("grid")
 const cells = document.getElementsByClassName("cell")
@@ -64,6 +65,7 @@ function updateCurrentColor() {
     colorViewer.style.backgroundColor = drawColorStr
 }
 
+//sets the background in all cells with the class "emptry" to the current color
 function setBackground() {
     backgroundColorStr = drawColorStr
     for (let i in cells) {
@@ -71,6 +73,15 @@ function setBackground() {
             cells[i].style.backgroundColor = backgroundColorStr
         }
     }
+}
+
+function saveImage() {
+    modernScreenshot.domToPng(grid).then((dataUrl) => {
+        const link = document.createElement("a")
+        link.download = "mySketch.png"
+        link.href = dataUrl
+        link.click()
+    })
 }
 
 //EVENT LISTENERS
@@ -104,6 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
     setResolution()
 })
 
+//Sets the background to the current color
 buttonSetBackground.addEventListener("click", () => {
     setBackground()
+})
+
+buttonSaveImage.addEventListener("click", () => {
+    saveImage()
 })
