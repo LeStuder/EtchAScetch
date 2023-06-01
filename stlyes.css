@@ -1,0 +1,131 @@
+:root {
+    --grid-size: 500;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #252525;
+    font-family: Mulish, "Open Sans", sans;
+}
+
+header {
+    text-align: center;
+    color: ghostwhite;
+    margin: 7vh 0;
+}
+
+header > * {
+    margin: 0;
+}
+
+header > h1 {
+    font-size: 7vh;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#grid,
+#sidebar {
+    border: solid 2px ghostwhite;
+    border-radius: 5px;
+    background-color: ghostwhite;
+}
+
+#grid {
+    height: var(--grid-size) px;
+    width: var(--grid-size) px;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(2, 250px);
+    margin-left: 5%;
+    display: grid;
+}
+
+#sidebar {
+    width: 20%;
+    min-width: 250px;
+    margin-left: 5px;
+    padding-left: 3vw;
+    justify-self: end;
+}
+
+#sidebar > * {
+    margin-bottom: 30px;
+}
+
+#sidebar > * > h2 {
+    margin: 0;
+}
+
+.color-flex-container,
+.color-range,
+#resolution-flex-container,
+#resolution-range {
+    display: inline-block;
+    margin: 1vh 0 0;
+}
+
+.color-flex-container,
+#resolution-flex-container {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    position: relative;
+    width: 40%;
+    top: -3px;
+}
+
+.color-flex-container > *,
+#resolution-flex-container > * {
+    margin: 0;
+}
+
+.color-range,
+#resolution-range {
+    width: 40%;
+}
+
+#resolution-range {
+    accent-color: #252525;
+}
+
+#input-color-red {
+    accent-color: red;
+}
+#input-color-green {
+    accent-color: green;
+}
+#input-color-blue {
+    accent-color: blue;
+}
+
+#color-viewer {
+    width: 40%;
+    height: 5vh;
+    margin-top: 5px;
+    border: solid 1px #252525;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.button {
+    display: block;
+    width: 40%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#colors {
+    margin-top: 3vh;
+}
+
+#resolution > .button {
+    margin-top: 5px;
+}

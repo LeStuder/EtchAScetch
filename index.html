@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="stlyes.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <title>Etch A Sketch</title>
+    </head>
+    <body>
+        <header>
+            <h1>Etch-A-Sketch</h1>
+            <p>Leander Studer - 2023</p>
+        </header>
+        <main>
+            <div id="grid"></div>
+            <aside id="sidebar">
+                <div id="colors">
+                    <h2>Color</h2>
+                    <input type="range" name="red" class="color-range" id="input-color-red" min="0" max="255" value="0" />
+                    <div class="color-flex-container">
+                        <p class="color-value-display" id="color-value-display-red">0</p>
+                        <label for="red" class="color-label" id="color-label-red">Red</label>
+                    </div>
+                    <input type="range" name="green" class="color-range" id="input-color-green" min="0" max="255" value="0" />
+                    <div class="color-flex-container">
+                        <p class="color-value-display" id="color-value-display-green">0</p>
+                        <label for="green" class="color-label" id="color-label-green">Green</label>
+                    </div>
+                    <input type="range" name="blue" class="color-range" id="input-color-blue" min="0" max="255" value="0" />
+                    <div class="color-flex-container">
+                        <p class="color-value-display" id="color-value-display-blue">0</p>
+                        <label for="blue" class="color-label" id="color-label-blue">Blue</label>
+                    </div>
+                    <div id="color-viewer"></div>
+                    <button type="button" class="button" id="btn-set-background">Set as Background</button>
+                </div>
+                <div id="resolution">
+                    <h2>Resolution</h2>
+                    <input type="range" name="number" id="resolution-range" min="1" max="100" value="50" />
+                    <div id="resolution-flex-container">
+                        <p id="resolution-value-display">50</p>
+                        <label for="number" id="resolution-label">Squares</label>
+                    </div>
+                    <button type="button" class="button" id="btn-set-resolution">Set & Clear</button>
+                </div>
+            </aside>
+        </main>
+
+        <script src="main.js"></script>
+    </body>
+</html>
