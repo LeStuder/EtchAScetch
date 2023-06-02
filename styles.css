@@ -14,7 +14,7 @@ body {
 header {
     text-align: center;
     color: ghostwhite;
-    margin: 7vh 0;
+    margin: 5vh 0;
 }
 
 header > * {
@@ -28,7 +28,8 @@ header > h1 {
 main {
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 70%;
+    min-width: min-content;
     margin: 0 auto;
 }
 
@@ -44,7 +45,7 @@ main {
     width: var(--grid-size) px;
     grid-template-columns: repeat(2, 250px);
     grid-template-rows: repeat(2, 250px);
-    margin-left: 5%;
+    margin-left: 0;
     display: grid;
 }
 
@@ -52,7 +53,7 @@ main {
     width: 20%;
     min-width: 250px;
     margin-left: 5px;
-    padding-left: 3vw;
+    padding-left: 3%;
     justify-self: end;
 }
 
